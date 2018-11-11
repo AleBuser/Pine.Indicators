@@ -1,8 +1,8 @@
 //@version=3
 study("DeusNext",overlay=true)
 fast = 35,slow = 55, signalSpeed = 32
-fastMA = ema(close,fast)
-slowMA = ema(close,slow)
+fastMA = sma(close,fast)
+slowMA = sma(close,slow)
 macd = fastMA-slowMA
 signal = sma(macd,signalSpeed)
 
