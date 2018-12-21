@@ -15,8 +15,6 @@ baseLine = donchian(basePeriods)
 leadLine1 = speed*avg(conversionLine, baseLine) + (1-speed)*(close+atr)
 leadLine2 = (1-speed)*donchian(laggingSpan2Periods) + speed*(close +atr)
 
-crossLines = leadLine1[2] > leadLine2[2] and leadLine1[1]  <= leadLine2[1]
-crossLines2 = leadLine1[2] < leadLine2[2] and leadLine1[1]  >= leadLine2[1]
 
 stichy =ema(leadLine1-leadLine2,signalL)
 
